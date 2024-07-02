@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Enroll in Two-Factor Authentication</h1>
+    <p>Scan the QR code with your Google Authenticator app:</p>
+    <img src="{{ qrCode }}" alt="QR Code">
+    <p>Or enter this code manually: <strong>{{ secret }}</strong></p>
+    <p>When you are ready, you can go to the <a href="{{ path('2fa_verify', { 'id': id }) }}">verification page</a>.</p>
+{% endblock %}
